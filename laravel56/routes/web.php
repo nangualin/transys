@@ -11,7 +11,6 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/index', ['uses' => 'IndexController@index', 'as' => 'index']);
 
-    return view('hplus.index');
-});
+Route::get('/search_news', ['uses' => 'NewsController@newsIndex', 'as' => 'news.index']);
